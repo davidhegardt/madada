@@ -7,7 +7,7 @@ classoption:
 documentclass: scrreprt
 
 toc: true
-lang: sv-SE
+lang: swedish
 
 headerdef: true
 
