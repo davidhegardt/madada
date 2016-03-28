@@ -7,7 +7,7 @@ classoption:
 documentclass: scrreprt
 
 toc: true
-lang: swedish
+#lang: sv-SE
 
 headerdef: true
 
@@ -21,11 +21,9 @@ include-before:
 
 bibliography:
   - references.bib
-biblio-title: sources
-biblio-style: apa
-fullbib: true
+
 nocite: |
-    @wiki-info
+    @git-info
 ...
 # Måste testa hur det här funkar
 

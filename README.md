@@ -1,23 +1,5 @@
----
-#fontsize: 10pt
-#papersize: a4paper
-classoption:
-  - titlepage
-  - oneside
-documentclass: scrreprt
+# Verktyg och metoder...
 
-toc: true
-
-
-headerdef: true
-
-title: Readme for Projekt
-subtitle: Metoder och verktyg
-include-before:
-
-nocite: |
-    @wiki-info
-...
 ## Syfte
 Syftet är att lära sig använda verktyg som används i och omkring
 systemutveckling. Kursen heter Metoder och Verktyg och projektet består av
@@ -32,3 +14,30 @@ Undersöka och presentera tre vanliga verktyg som underlättar utvecklingsproces
 
 * Dokumentationsverktyg  
 Undersöka och presentera två olika dokumentationsverktyg.
+
+## Dokumentet
+För att bygga dokumentet anropas toPDF.sh med namnet på en markdown fil. ett anrop till 
+``` ./toPDF.sh test ```
+kommer använda test.md för att bygga test.pdf.
+
+## Källor
+Källor läggs till i filen references.bib. Webbkällor anges på formen:
+
+``` 
+    @online{wiki-info,
+    title = "Pro GIT - 2nd Edition",
+    author =    "Scott Chacon and Ben Straub",
+    version =   "2.0",
+    date = "2016-03-03",
+    url = "https://git-scm.com/book/en/v2",
+    urldate = "2016-03-28"
+    }
+```
+
+Då vi förmodligen inte har tänkt faktiskt hänvisa till någonting i texten måste vi lägga in dummycitat i YAML-sektionen i headern:
+
+``` 
+    nocite:
+        @wiki-info,
+        @other-source
+```
