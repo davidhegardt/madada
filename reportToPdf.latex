@@ -98,10 +98,10 @@ $for(polyglossia-otherlangs)$
 $endfor$
 \fi
 
-\usepackage[backend=biber]{biblatex}
+%\usepackage[backend=biber]{biblatex}
 
 
-\addbibresource{references.bib}
+%\addbibresource{references.bib}
 
 $endif$
 
