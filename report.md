@@ -23,7 +23,9 @@ bibliography:
   - references.bib
 
 nocite: |
-    @git-info
+    @git-info,
+    @git-gtest,
+    @gnu-gcov
 ...
 #Stödjande
 
