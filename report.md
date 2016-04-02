@@ -26,7 +26,12 @@ nocite: |
     @git-info,
     @subversion-info,
     @git-gtest,
-    @gnu-gcov
+    @gnu-gcov,
+    @waterfall-method,
+    @spiral-method,
+    @scrum-method,
+    @xp-method,
+    @dev-methods
 ...
 #Stödjande
 
@@ -71,5 +76,41 @@ Hur själva testklasserna och testerna utformas är däremot mycket väldokument
 GNU/gcc tillhandahåller verktyget gcov för code coverage-testning. Även här är den grundläggande användningen väldigt enkel, och går i stort sett ut på att man anropar gcov med källkoden som ska testas, för att sedan köra resulterande fil. Resultatet presenteras i defaultläget som en sammanställning av antal kodrader, antal lästa, och lästa i procen, men flera flaggor kan användas för att få fram mer utförlig information. Code coverage blir som mest värdefullt när det kombineras med enhetstestning, och förmågan att se inte bara hur testad kod klarar sig, utan också hur stor del av koden som testerna faktiskt går igenom kan bidra till både säkrare och mer optimerad kod.
 
 Nackdelen med både enhetstestning och code coverage är förstås att programmering är en för komplex syssla för att så enkla kvantitativa mätmetoder ska kunna ge entydiga resultat, mer än i de allra enklaste fallen. Ingenting säger att de tester som *inte* skrivits inte heller hade behövts. Och inga garantier finns för att de tester som skrivits är meningsfulla, hur stor del av koden som än omfattas. Risken finns till och med, och då särskilt för nya programmerare, att man lockas att jaga procent, istället för att ta fram så relevanta tester som möjligt.
+
+
+#Utvecklingsmetoder
+
+## Vattenfallsmetoden
+
+Vattenfallsmetoden är inte specifikt utformat för mjukvaruutveckling, utan har sitt ursprung i tillverkningsindustrin, och bygger på ett sekventiellt tillvägagångssätt där man successivt betar av ett antal utvecklingssteg. Stegen kan summeras som: kravanalys, design, kodning, testning, och slutligen installation och underhåll av produkten. Utvecklingscykeln är linjär, vilket innebär att när man väl är klar med ett steg så återkommer i regel inte till det, alltså måste alla delar i programmet vara implementerade innan man går vidare till nästa steg.
+
+Krav: Utvecklingen av programvara som sker sekventiellt kan tendera att glida från kundens krav vid större, längre projekt, där man har många som arbetar på samma projekt där viktig kunskap kan försvinna mitt i projektet om någon slutar. Det ställer stora krav på dokumentation. Dessutom är möjlighet att ändra kraven mycket begränsade, och mycket kostsamma om så sker.
+
+Testning: I vattenfallsmetoden testar och buggfixar du produkten utvecklingscycelns slutfas.
+
+##Spiral-modell
+
+Spiral-modellen är en metod som lånar element från olika utvecklingsmetoder som vattenfall, iterativa metoder och RAD (rapid application development). Focus ligger på att minimera risken för projekt, och är särskilt lämpad för större projekt. Varje iteration är uppdelad i 4 stadier, först identifiera mål, sedan analysera risker, sedan utveckling, och sist planering av nästa iteration.  
+
+Krav: Utvecklingcyklen sker iterativt, vilken medför att man vid varje iteration klargör vilka mål man har och i slutet av varje iteration utvärderar resultatet. 
+
+Test: I spiral-modellen är testningen en riskbedömning, det gäller att hitta en balans då man inte vill släppa en bristfällig produkt, samtidigt som man inte kan ha allt för omfattande testning då detta gynnar konkurrenter.
+
+##Scrum
+
+Som ett svar på traditionella, sekventiella och "kantiga" utvecklingsmetoder kom de agila utvecklingsmetoderna. Scrum är den vanligaste av de agila metoderna. Här vill man istället för att ha en linjär process så har man korta iterationer (även kallade sprinter) där man implementerar en liten del av programmet i varje iteration. En iteration består av ett planerings-, utvecklings-, test- och ett utvärderingsstadie. 
+
+Krav: Kraven kan relativt enkelt uppdateras vid en iteration om det faller inom ramen för ekonomi och tid, vilket bidrar till att man har stor chans att träffa de mål som kunden ställer. Detta ställer också högre krav på delaktighet i projektet från kundens sida.
+
+Testning: Vid varje inkrementering testas nyatillkomna funktioner i programmet. Eftersom fokus läggs på korta iterationer kan inte jättemycket tid läggas på testning vid varje iteration, vilket kan leda till bristfällig kod.
+
+##Extrem programmering
+
+Extrem är ytterliggare en agil metod, som lägger fokus på korta utvecklingscykler och frekventa releaser. Under ett projekts cykel lägger man stor vikt vid att hela tiden granska befintlig kod, och därför främjar man utövandet av par-programmering, alltså att två personer arbetar vid samma arbetsstation. Det kan tilläggas att extrem programmering inte behöver motsäga andra agila metoder som t.ex. Scrum utan de har helt enkelt focus på olika delar i utvecklingsprocessen, och snarare kan kompletera varandra.
+
+Krav: Vid extrem programmering sätter man inte upp fasta mål från början, utan låter dem successivt växa fram under projektets gång. Kraven formuleras också som acceptanstest, som körs och publiceras under projektets gång.
+
+Testning: Som nämndes ovan, är acceptanstest en viktig del av extrem programmering, utöver detta uppmuntras inom extrem programmering omfattande testning, av små beståndsdelar av källkod.
+
 
 # Referenser
