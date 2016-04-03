@@ -39,8 +39,7 @@ nocite: |
 GIT är ett verktyg för versionshantering utvecklat utav skaparen av Linux, Linus Thorvalds. Versionshantering används inom projekt för att kunna spåra ändringar som gjorts i filerna som hör till projektet, oftast används versionshantering för skriven kod i systemutveckling. Versionskontroll är viktigt att använda för att undvika att skriva över kod av misstag, men det är absolut nödvändigt i större projekt där man arbetar med flera personer. Med hjälp av en mjukvara för versionshantering sköts detta av ett program istället för att manuellt spara ner versioner. Med mjukvara för versionshantering kan man sedan gå tillbaka och se tidigare gjorda ändringar i koden.  
 
 GIT är ett distribuerat system för versionshantering. Detta innebär att systemet inte bara hanterar versionshantering lokalt, eller på en server utan flera kopior av repositoryt existerar på flera olika maskiner. På detta sätt bygger man ett redundant system, om filerna försvinner från servern eller från en dator så finns det fortfarande kvar flera kopior hos medlemmarna samt på servern där projektet är uppladdat. Med hjälp av GIT kan också flera versioner av projektet finnas lagrat på olika klienter. Fördelen är också att medlemmarna som arbetar i projektet inte behöver vara uppkopplade mot servern när de jobbar mot projektet, det behöver bara göras när man hämtar data från repositoryt (pull) eller när man gjort ändringar som man vill ladda upp (push).  
-GIT skiljer sig från andra mjukvaror för versionshanteringen, andra system tar hänsyn till vilka filer som har ändrats för att hantera olika versioner av dessa. GIT använder sig istället av sk snapshots av hela filstrukturen, en snapshot är en bild av hela filsystemet vid ett visst tillfälle. En snapshot skapas när man gör en commit, om ingenting har förändrats så skapas en länk till den tidigare versionen, om något har förändrats så sparas den förändrade information i den nya snapshot kopian.
-
+GIT skiljer sig från andra mjukvaror för versionshanteringen, andra system tar hänsyn till vilka filer som har ändrats för att hantera olika versioner av dessa. GIT använder sig istället av sk snapshots av hela filstrukturen, en snapshot är en bild av hela filsystemet vid ett visst tillfälle. En snapshot skapas när man gör en commit, om ingenting har förändrats så skapas en länk till den tidigare versionen, om något har förändrats så sparas den förändrade information i den nya snapshot kop
 ## Github
 Github är en hemsida med serverlagring av GIT projekt. Det är fullt möjligt att använda GIT utan att använda Github, men man behöver då själv sätta upp en server. Github bygger på open source principen med att det mesta laddas upp för allmän beskådan, vem som helst kan komma åt och se källkoden för de projekt som är uppladdade på Github. Andra git användare kan också vara med och vidareutveckla projektet, dessa blir då projektmedlemmar som kallas för collaborators. En användare kan begära en pull request på ett projekt, och ägaren av projektet kan sedan gå in och bevilja detta via hemsidan vilket tillåter användaren att ladda ner hela projektet till sin klient. När man använder sig av GIThub så får man en GUI för att överblicka projektet via hemsidan, härifrån kan man se samtliga versioner av projektets filer samt vilka ändringar som gjorts mellan olika versioner. Man kan se vem som gjort vilken ändring och vad som skiljer de olika versionerna åt.  
 
@@ -84,13 +83,13 @@ Nackdelen med både enhetstestning och code coverage är förstås att programme
 
 Vattenfallsmetoden är inte specifikt utformat för mjukvaruutveckling, utan har sitt ursprung i tillverkningsindustrin, och bygger på ett sekventiellt tillvägagångssätt där man successivt betar av ett antal utvecklingssteg. Stegen kan summeras som: kravanalys, design, kodning, testning, och slutligen installation och underhåll av produkten. Utvecklingscykeln är linjär, vilket innebär att när man väl är klar med ett steg så återkommer i regel inte till det, alltså måste alla delar i programmet vara implementerade innan man går vidare till nästa steg.
 
-Krav: Utvecklingen av programvara som sker sekventiellt kan tendera att glida från kundens krav vid större, längre projekt, där man har många som arbetar på samma projekt där viktig kunskap kan försvinna mitt i projektet om någon slutar. Det ställer stora krav på dokumentation. Dessutom är möjlighet att ändra kraven mycket begränsade, och mycket kostsamma om så sker.
+Krav: Utvecklingen av programvara som sker sekventiellt kan tendera att glida från kundens krav vid större, längre projekt. Dessutom är möjlighet att ändra kraven mycket begränsade, och mycket kostsamma om så sker.
 
 Testning: I vattenfallsmetoden testar och buggfixar du produkten utvecklingscycelns slutfas.
 
 ##Spiral-modell
 
-Spiral-modellen är en metod som lånar element från olika utvecklingsmetoder som vattenfall, iterativa metoder och RAD (rapid application development). Focus ligger på att minimera risken för projekt, och är särskilt lämpad för större projekt. Varje iteration är uppdelad i 4 stadier, först identifiera mål, sedan analysera risker, sedan utveckling, och sist planering av nästa iteration.  
+Spiral-modellen är en metod som lånar element från olika utvecklingsmetoder som vattenfall, iterativa metoder och RAD (rapid application development). Focus ligger på att minimera risken för projekt, och är särskilt lämpad för större sådana. Varje iteration är uppdelad i 4 stadier, först identifiera mål, sedan analysera risker, sedan utveckling, och sist planering av nästa iteration.  
 
 Krav: Utvecklingcyklen sker iterativt, vilken medför att man vid varje iteration klargör vilka mål man har och i slutet av varje iteration utvärderar resultatet. 
 
@@ -98,19 +97,19 @@ Test: I spiral-modellen är testningen en riskbedömning, det gäller att hitta 
 
 ##Scrum
 
-Som ett svar på traditionella, sekventiella och "kantiga" utvecklingsmetoder kom de agila utvecklingsmetoderna. Scrum är den vanligaste av de agila metoderna. Här vill man istället för att ha en linjär process så har man korta iterationer (även kallade sprinter) där man implementerar en liten del av programmet i varje iteration. En iteration består av ett planerings-, utvecklings-, test- och ett utvärderingsstadie. 
+Som ett svar på traditionella, sekventiella och "kantiga" utvecklingsmetoder kom de agila utvecklingsmetoderna. Scrum är den vanligaste av de agila metoderna. Istället för en linjär process har man korta iterationer (även kallade sprinter) där man implementerar en liten del av programmet. En iteration består av ett planerings-, utvecklings-, test- och ett utvärderingsstadie. 
 
 Krav: Kraven kan relativt enkelt uppdateras vid en iteration om det faller inom ramen för ekonomi och tid, vilket bidrar till att man har stor chans att träffa de mål som kunden ställer. Detta ställer också högre krav på delaktighet i projektet från kundens sida.
 
-Testning: Vid varje inkrementering testas nyatillkomna funktioner i programmet. Eftersom fokus läggs på korta iterationer kan inte jättemycket tid läggas på testning vid varje iteration, vilket kan leda till bristfällig kod.
+Testning: Vid varje inkrementering testas nytillkomna funktioner i programmet. Eftersom fokus läggs på korta iterationer kan inte jättemycket tid läggas på testning vid varje iteration, vilket i värsta fall leder till bristfällig kod.
 
 ##Extrem programmering
 
-Extrem är ytterliggare en agil metod, som lägger fokus på korta utvecklingscykler och frekventa releaser. Under ett projekts cykel lägger man stor vikt vid att hela tiden granska befintlig kod, och därför främjar man utövandet av par-programmering, alltså att två personer arbetar vid samma arbetsstation. Det kan tilläggas att extrem programmering inte behöver motsäga andra agila metoder som t.ex. Scrum utan de har helt enkelt focus på olika delar i utvecklingsprocessen, och snarare kan kompletera varandra.
+Extrem programmering är ytterliggare en agil metod, som lägger fokus på korta utvecklingscykler och frekventa releaser. Under ett projekts cykel lägger man stor vikt vid att hela tiden granska befintlig kod, och främjar man utövandet av par-programmering, alltså att två personer arbetar vid samma arbetsstation. Det kan tilläggas att extrem programmering inte behöver motsäga andra agila metoder som t.ex. Scrum utan de har helt enkelt focus på olika delar i utvecklingsprocessen, och snarare kan kompletera varandra.
 
 Krav: Vid extrem programmering sätter man inte upp fasta mål från början, utan låter dem successivt växa fram under projektets gång. Kraven formuleras också som acceptanstest, som körs och publiceras under projektets gång.
 
-Testning: Som nämndes ovan, är acceptanstest en viktig del av extrem programmering, utöver detta uppmuntras inom extrem programmering omfattande testning, av små beståndsdelar av källkod.
+Testning: Som nämndes ovan, är acceptanstest en viktig del av extrem programmering, utöver detta uppmuntras inom extrem programmering omfattande testning, av små beståndsdelar av källkod, s.k. unit testing.
 
 
 # Referenser
