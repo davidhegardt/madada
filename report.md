@@ -25,6 +25,8 @@ bibliography:
 nocite: |
     @git-info,
     @subversion-info,
+    @trello-info,
+    @trello-info2,
     @git-gtest,
     @gnu-gcov,
     @waterfall-method,
@@ -58,7 +60,16 @@ denna centraliserade lösning.
 
  Detta är såklart en nackdel då man vill arbeta offline, och det finns tillägsmöjligheter att kunna kopiera hela projektet lokalt,
 men det är inte standard på samma sätt som med GIT. Den stora fördelen är att det är enklare att lära sig Subversion och risken för
-fel är mindre än med GIT som är betydligt mer komplext. 
+fel är mindre än med GIT som är betydligt mer komplext.
+
+## Trello  
+Trello är ett open-source planeringsverktyg med flera användningsområden, men kan med fördel användas inom projektplanering. Trello baseras på kanban strukturen för layout av projekthantering. Verktyget är webb-baserat och projektet delas upp i olika anslagstavlor där man använder sig av checklistor, sk task lists med punkter över vad som ska göras i projektet. Efter att man gjort klart punkterna i en anslagstavla så bockas punkten av och flyttas till nästa steg. Under testen av verktyget så använde vi olika steg i processen och flyttade anslagstavlorna vidare varefter ett steg blir klart. T.ex kan man ha en planeringsfas, en fas för informationsinsamling, en skrivningsfas och en utvärderingsfas. Verktyget tillåter att flera användare samtidigt är inloggade och ser samma webbinterface, användarna har sjävla möjligheten att sätta upp nya mål och bocka av vad som är gjort. Det finns även möjlighet att tilldela en specifik del till en användare som då är helt ansvarig för den delen av projektet.  
+Det är enkelt att ladda upp filer, Trello har integrationer med bla Google Drive, Dropbox och One Drive. Man kan sätta upp tider med deadlines och sedan få notifications för att kunna prioritera vad som behöver göras härnäst.
+
+
+Trello har stöd för att användas via mobila plattformar, inloggningen har även integrationer till andra system som t.ex chattklienten slack. Webbinterfacet består av en övergripande bild över samtliga anslagstavlor och vilken fas dessa är i. I högerspalten kan man se senaste aktiviteten, vem som har gjort vad i projektet. Verktyget är väldigt simpelt och kan närmast beskrivas som en digital whiteboard, men det är väldigt kraftfullt och används utav flera stora företag.
+Trello är väldigt simpelt att sätta sig in i, med integrationer mot t.ex gmail så behövs ingen separat registrering och man ser det mesta direkt när man kommer åt verktyget, väldigt lite konfigurering behöver göras och det finns en del avancerade funktioner men som nybörjare så är man igång med verktyget inom en timme.     
+
 
 # Testverktyg
 
