@@ -33,8 +33,10 @@ nocite: |
     @spiral-method,
     @scrum-method,
     @xp-method,
-    @dev-methods
-    @doxygen-util
+    @dev-methods,
+    @doxygen-util,
+    @markdown-util,
+    @mkdocs-util,
 ...
 #Stödjande
 
@@ -131,5 +133,14 @@ Doxygen är ett dokumentationsverktyg, som genererar dokumentation utifrån komm
 För att generera dokumentation ur källkoden krävs en konfigurationsfil för det projekt som ska dokumenteras. För mindre projekt så behövs inte direkt göras några ändringar i konfig-filen, utan det ska i regel fungera direkt. För större projekt så måste du däremot ställa in vilka typer av filer du vill dokumentera, om det ska göras rekursivt i katalogsystem etc, och detta kan förstås ta en tag att lära sig. Som tur var finns omfattande dokumentation för Doxygen. 
 
 Det andra du behöver för dokumentationen är kommentarer i källkoden. Det går att göra utan, doxygen kommer ändå dokumentera vissa saker som den kan läsa ur koden(som klasser), men du kommer antagligen vilja lära dig Doxygens kommenterings-system för det är det som Doxygen bygger dokumentationen på.
+
+##Markdown
+
+Markdown är egentligen ett markup language för att konvertera text till HTML utan att skriva ren HTML kod. Markdown använder en förenklad syntax jämfört med HTML, detta konverteras sedan till HTML kod. Exempel på detta kan vara '#' som tolkas som stor rubrik och paragrafer skapas automatiskt med hjälp av tomma rader och dubbla mellanrum i texten. Vi har valt att använda markdown som dokumentationsverktyg då det löser ett stort problem som andra ordbehandlare
+har problem med och det är kompabiliteten. Med hjälp av Markdown kan man säkerställa att alla använder samma plattform för dokumentation, oavsett om användaren använder Windows, MacOS eller Linux. Markdown är en teckentolkare som genererar HTML när det skapas och dette innebär också att den inte använder en specifik
+textredigerare. För att konvertera Markdown text till ett färdigt dokument så använder vi verktyget LaTex. LaTex konverterar den skrivna texten och genererar själva layouten utifrån markdown, så att rubriksättning och textformateringen ser bra ut när den genereras. I uppgiften har vi använt LaTex för att ta fram en PDF rapport utifrån markdown.  
+
+Ett verktyg för att dokumentera projekt med hjälp av Markdown är MKdocs, verktyget bygger på text skriven med hjälp av markdown samt script skriven i python, man använder sedan en konfigurationsfil i YAML för att skapa en automatiskt innehållsförteckning baserad på rubriker, och även stöd för referenser och länkning i dokumenten. MKdocs innehåller flera mallar för att få till en snygg dokumentation. I uppgiften har vi använt YAML konfiguration för innehållsförteckning och referenser.  
+Markdown kräver en del tid för att lära sig, som nybörjare kan det vara relativt svårt att sätta sig in i, då man måste lära sig syntaxen för Markdown, en extern textredigerade behövs, LaTex installerat och en viss kunskap för att generera innehållsförteckning och korrekt formatering. Till en början var det detaljer i formateringen som ställde till problem, men det finns bra dokumentation att tillgå och färdiga verktyg som hjälper till med dessa steg. Det finns även online redigerare för Markdown där man kan se resultatet direkt i webbläsaren.
 
 # Referenser
