@@ -132,4 +132,5 @@ Doxygen är ett dokumentationsverktyg, som genererar dokumentation utifrån komm
 För att generera dokumentation ur källkoden krävs en konfigurationsfil för det projekt som ska dokumenteras. För mindre projekt så behövs inte direkt göras några ändringar i konfig-filen, utan det ska i regel fungera direkt. För större projekt så måste du däremot ställa in vilka typer av filer du vill dokumentera, om det ska göras rekursivt i katalogsystem etc, och detta kan förstås ta en tag att lära sig. Som tur var finns omfattande dokumentation för Doxygen. 
 
 Det andra du behöver för dokumentationen är kommentarer i källkoden. Det går att göra utan, doxygen kommer ändå dokumentera vissa saker som den kan läsa ur koden(som klasser), men du kommer antagligen vilja lära dig Doxygens kommenterings-system för det är det som Doxygen bygger dokumentationen på.
+
 # Referenser
