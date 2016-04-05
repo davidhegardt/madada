@@ -34,6 +34,7 @@ nocite: |
     @scrum-method,
     @xp-method,
     @dev-methods
+    @doxygen-util
 ...
 #Stödjande
 
@@ -122,5 +123,13 @@ Krav: Vid extrem programmering sätter man inte upp fasta mål från början, ut
 
 Testning: Som nämndes ovan, är acceptanstest en viktig del av extrem programmering, utöver detta uppmuntras inom extrem programmering omfattande testning, av små beståndsdelar av källkod, s.k. unit testing.
 
+#Dokumentationsverktyg
 
+##Doxygen
+
+Doxygen är ett dokumentationsverktyg, som genererar dokumentation utifrån kommentarerna i en källkod. En av fördelarna med att ha ett sådant verktyg är att det blir relativt lätt att hålla dokumentationen i fas med källkoden. Jag testade hur det fungerar för C++, men det ska fungerar för en rad andra språk. Installationen är enkel, i alla fall för ubuntu där det går att hämta med apt-get, du får dock välja till ett paket om du vill ha ett grafiskt gränssnitt. 
+
+För att generera dokumentation ur källkoden krävs en konfigurationsfil för det projekt som ska dokumenteras. För mindre projekt så behövs inte direkt göras några ändringar i konfig-filen, utan det ska i regel fungera direkt. För större projekt så måste du däremot ställa in vilka typer av filer du vill dokumentera, om det ska göras rekursivt i katalogsystem etc, och detta kan förstås ta en tag att lära sig. Som tur var finns omfattande dokumentation för Doxygen. 
+
+Det andra du behöver för dokumentationen är kommentarer i källkoden. Det går att göra utan, doxygen kommer ändå dokumentera vissa saker som den kan läsa ur koden(som klasser), men du kommer antagligen vilja lära dig Doxygens kommenterings-system för det är det som Doxygen bygger dokumentationen på.
 # Referenser
